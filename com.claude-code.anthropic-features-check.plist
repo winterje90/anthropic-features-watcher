@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  macOS launchd job: runs the watcher daily at 7:00 AM.
+  EDIT BEFORE USING:
+    1. Replace YOUR_USERNAME with your macOS username (run `whoami`).
+    2. Set PATH so it contains the directory holding `claude` (run `dirname "$(command -v claude)"`).
+  Then: cp this file to ~/Library/LaunchAgents/ and run
+    launchctl load ~/Library/LaunchAgents/com.claude-code.anthropic-features-check.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.claude-code.anthropic-features-check</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/YOUR_USERNAME/.claude/scripts/anthropic-features-check.sh</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>7</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/anthropic-features-check.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/anthropic-features-check.err.log</string>
+</dict>
+</plist>
