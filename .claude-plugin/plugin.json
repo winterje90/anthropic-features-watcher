@@ -1,0 +1,12 @@
+{
+  "name": "anthropic-features-watcher",
+  "description": "Keeps Claude Code aware of newly released Anthropic/Claude features. Auto-updates a list (once a day, when you open Claude Code) that Claude treats as ground truth, so it stops saying recent features don't exist.",
+  "version": "1.0.0",
+  "author": {
+    "name": "James Winter"
+  },
+  "homepage": "https://github.com/winterje90/anthropic-features-watcher",
+  "repository": "https://github.com/winterje90/anthropic-features-watcher",
+  "license": "MIT",
+  "keywords": ["anthropic", "claude", "features", "changelog", "awareness", "news"]
+}

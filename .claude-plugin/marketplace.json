@@ -1,0 +1,26 @@
+{
+  "name": "anthropic-features-watcher",
+  "owner": {
+    "name": "James Winter"
+  },
+  "metadata": {
+    "description": "Keep Claude Code current on newly released Anthropic features.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "anthropic-features-watcher",
+      "source": "./",
+      "description": "Keeps Claude Code aware of newly released Anthropic/Claude features. Auto-updates a list Claude treats as ground truth.",
+      "version": "1.0.0",
+      "author": {
+        "name": "James Winter"
+      },
+      "homepage": "https://github.com/winterje90/anthropic-features-watcher",
+      "repository": "https://github.com/winterje90/anthropic-features-watcher",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": ["anthropic", "claude", "features", "changelog", "awareness", "news"]
+    }
+  ]
+}
